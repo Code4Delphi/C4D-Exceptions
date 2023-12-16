@@ -43,8 +43,13 @@ type
     btnObligatory: TButton;
     btnExceptionDefault: TButton;
     Button2: TButton;
+    Button3: TButton;
     procedure btnExceptionDefaultClick(Sender: TObject);
     procedure Button2Click(Sender: TObject);
+    procedure btnMsgClick(Sender: TObject);
+    procedure btnErrorClick(Sender: TObject);
+    procedure btnObligatoryClick(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
   private
 
   public
@@ -58,9 +63,31 @@ implementation
 
 {$R *.dfm}
 
+const
+  MSG_PADRAO = 'Esta mensagem não sera exibida';
+
+procedure TC4DExceptionsDemo01ViewMain.btnErrorClick(Sender: TObject);
+begin
+  raise ExceptionsError.Create('Mesagem de Erro', 'Detalhes');
+  ShowMessage(MSG_PADRAO);
+end;
+
 procedure TC4DExceptionsDemo01ViewMain.btnExceptionDefaultClick(Sender: TObject);
 begin
-  raise Exception.Create('Exception padrão do Delphi');
+  raise Exception.Create('Error Message');
+  ShowMessage(MSG_PADRAO);
+end;
+
+procedure TC4DExceptionsDemo01ViewMain.btnMsgClick(Sender: TObject);
+begin
+  raise ExceptionsMsg.Create('Mesagem de informação', 'Detalhes');
+  ShowMessage(MSG_PADRAO);
+end;
+
+procedure TC4DExceptionsDemo01ViewMain.btnObligatoryClick(Sender: TObject);
+begin
+  raise ExceptionsObligatory.Create('Mesagem de obrigatório', 'Detalhes', Edit1);
+  ShowMessage(MSG_PADRAO);
 end;
 
 procedure TC4DExceptionsDemo01ViewMain.Button2Click(Sender: TObject);
@@ -68,6 +95,22 @@ begin
   Edit1.SetFocus;
   //raise ExceptionsMsg.Create('Mensagem', 'Detalhes', Edit1);
   //raise ExceptionsError.Create('Mensagem', 'Detalhes', Edit1);
+end;
+
+procedure TC4DExceptionsDemo01ViewMain.Button3Click(Sender: TObject);
+begin
+  if(Edit1.Text = '')then
+    raise ExceptionsObligatory.Create('Campo obrigatório sem preenchimento', 'Detalhes', ComboBox1);
+
+  if(Edit1.Text = '')then
+  begin
+    TabSheet1.SetFocus;
+    Edit1.SetFocus;
+    ShowMessage('Minha mensagem');
+    Exit;
+  end;
+
+  //CONTINUACAO DO CODIGO
 end;
 
 end.

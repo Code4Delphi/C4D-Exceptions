@@ -1,0 +1,11 @@
+{
+	"name": "C4D-Exceptions",
+	"description": "",
+	"version": "1.0.0",
+	"homepage": "https://github.com/Code4Delphi/C4D-Exceptions",
+	"mainsrc": "Src",
+	"projects": [],
+	"dependencies": {
+		"github.com/code4delphi/c4d-msg": "^v1.0.0"
+	}
+}

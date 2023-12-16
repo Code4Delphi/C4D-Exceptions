@@ -129,6 +129,8 @@ object C4DExceptionsDemo01ViewMain: TC4DExceptionsDemo01ViewMain
       Align = alTop
       Caption = 'Msg'
       TabOrder = 0
+      OnClick = btnMsgClick
+      ExplicitLeft = 4
     end
     object btnWarning: TButton
       AlignWithMargins = True
@@ -155,6 +157,7 @@ object C4DExceptionsDemo01ViewMain: TC4DExceptionsDemo01ViewMain
       Align = alTop
       Caption = 'Error'
       TabOrder = 2
+      OnClick = btnErrorClick
     end
     object btnEmpty: TButton
       AlignWithMargins = True
@@ -194,6 +197,7 @@ object C4DExceptionsDemo01ViewMain: TC4DExceptionsDemo01ViewMain
       Align = alTop
       Caption = 'Obligatory'
       TabOrder = 5
+      OnClick = btnObligatoryClick
     end
     object btnExceptionDefault: TButton
       Left = 6
@@ -212,6 +216,15 @@ object C4DExceptionsDemo01ViewMain: TC4DExceptionsDemo01ViewMain
       Caption = 'Button2'
       TabOrder = 7
       OnClick = Button2Click
+    end
+    object Button3: TButton
+      Left = 448
+      Top = 168
+      Width = 145
+      Height = 25
+      Caption = 'Validar preenchimento'
+      TabOrder = 8
+      OnClick = Button3Click
     end
   end
 end

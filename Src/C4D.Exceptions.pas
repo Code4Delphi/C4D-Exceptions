@@ -6,7 +6,8 @@ uses
   System.SysUtils,
   Vcl.Forms,
   Vcl.Dialogs,
-  C4D.Exceptions.Base;
+  C4D.Exceptions.Base,
+  C4D.Msg;
 
 type
   ExceptionsMsg = class(EC4DExceptionsBase);
@@ -31,9 +32,16 @@ begin
     LDetails := EC4DExceptionsBase(E).Details;
 
   if(E is ExceptionsMsg)then
-    ShowMessage('Msg ' + LMsg)
+    ShowMsg(LMsg, LDetails)
   else if(E is ExceptionsError)then
-    ShowMessage('Erro ' + LMsg);
+    ShowError(LMsg, LDetails)
+  else if(E is ExceptionsObligatory)then
+    ShowObligatory(LMsg, LDetails)
+  else
+    ShowError(LMsg);
+
+  if(E is EC4DExceptionsBase)then
+    EC4DExceptionsBase(E).DoSetFocus;
 end;
 
 initialization

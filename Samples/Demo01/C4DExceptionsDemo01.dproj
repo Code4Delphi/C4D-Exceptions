@@ -58,6 +58,9 @@
         <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
         <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
         <SanitizedProjectName>C4DExceptionsDemo01</SanitizedProjectName>
+        <VerInfo_Locale>1046</VerInfo_Locale>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <DCC_UnitSearchPath>..\..\modules\c4d-msg\Src;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <DCC_UsePackage>DBXSqliteDriver;DBXDb2Driver;vclactnband;vclFireDAC;tethering;FireDACADSDriver;ACBr_BoletoFPDF;ACBr_BPeDabpeESCPOS;ACBr_BPe;HcRest;MEngineFireDAC;FireDACMSSQLDriver;vcltouch;ACBr_NFe;ACBr_NFeDanfeFR;vcldb;svn;ACBr_NFeDanfeESCPOS;ACBr_PAFNFCe;ACBr_OFX;vclib;frxTee26;ACBr_SATExtratoFR;FireDACDBXDriver;HcServer;ACBr_NFSeDanfseFR;vclx;HcEngineFireDAC;ACBr_SATExtratoRL;ACBr_GTIN;RESTBackendComponents;ACBr_Reinf;VCLRESTComponents;fsTee26;vclie;bindengine;CloudService;ACBr_PAF;FireDACMySQLDriver;fsIBX26;ACBr_SATECFVirtual;frx26;HcEngine;C4DMaskEdit;DataSnapClient;ACBr_OpenDelivery;bindcompdbx;ACBr_CTeDacteRL;ACBr_TCP;DBXSybaseASEDriver;IndyIPServer;ACBr_CTe;IndySystem;frxDBX26;fsADO26;ACBr_PagFor;dsnapcon;VirtualTreesR;ACBre_Social;FireDACMSAccDriver;FireDACInfxDriver;fmxFireDAC;vclimg;ACBr_SPEDImportar;bsfd103Rio;mydacvcl260;ACBr_SPED;ACBr_MDFe;emshosting;ACBr_BoletoRL;ACBr_LFD;DBXOdbcDriver;FireDACTDataDriver;FMXTee;crcontrols260;soaprtl;DbxCommonDriver;ACBr_CIOT;C4DWizard;ACBr_NFSeDanfseRL;xmlrtl;DataSnapNativeClient;soapmidas;fmxobj;rtl;emsserverresource;DbxClientDriver;DBXSybaseASADriver;pkItemMenuHelpDelphi;ACBr_Convenio115;appanalytics;ACBr_DebitoAutomatico;IndyIPClient;bindcompvcl;TeeUI;ACBr_NFSeXDANFSeFR;VclSmp;FireDACODBCDriver;mydacfmx260;DataSnapIndy10ServerTransport;HcMemTable;ACBr_Boleto;DataSnapProviderClient;ACBr_SEF2;FireDACMongoDBDriver;ACBr_MDFeDamdfeFR;ACBr_NFSe;RESTComponents;ZComponent;DBXInterBaseDriver;ACBr_NF3e;ZCore;ACBr_TEFD;HcCommons;emsclientfiredac;dacfmx260;DataSnapFireDAC;svnui;FMXAdvancedControls;ACBr_SATWS;DBXMSSQLDriver;ACBr_MDFeDamdfeRL;DatasnapConnectorsFreePascal;PngComponentsD;ACBr_EDI;ACBr_ONE;DBXOracleDriver;inetdb;ACBr_Diversos;ACBr_GNREGuiaFR;FmxTeeUI;emsedge;ACBr_LCDPR;FireDACIBDriver;fmx;fmxdae;DSPack_DXE2;ACBr_CTeDacteFR;MSNPopUp_D104;ZipMasterR;MJ4dl;dacvcl260;ACBr_Ponto;fs26;dbexpress;IndyCore;frxIntIO26;ZParseSql;dsnap;DataSnapCommon;emsclient;FireDACCommon;frxcs26;ACBr_NFSeX;DataSnapConnectors;ACBR_DeSTDA;soapserver;ACBr_SAT;FireDACOracleDriver;DBXMySQLDriver;DBXFirebirdDriver;ACBr_Sintegra;FireDACCommonODBC;FireDACCommonDriver;ACBr_ADRCST;ACBr_GNRE;frxIntIOIndy26;inet;IndyIPCommon;vcl;ACBr_NFeDanfeRL;ACBr_SATExtratoESCPOS;frxDB26;FireDACDb2Driver;ACBr_Integrador;fsDB26;HcClientDataSet;ZDbc;TeeDB;FireDAC;mydac260;HcBaseDataSet;ACBr_Comum;frxe26;FireDACSqliteDriver;FireDACPgDriver;ibmonitor;FireDACASADriver;ACBr_GNREGuiaRL;C4DDateEdit;frxIBX26;MEngine;VDOPrint;ibxpress;Tee;DataSnapServer;ibxbindings;BossExperts;dac260;FireDACDSDriver;vclwinx;mysqlmon260;ACBr_OpenSSL;frxADO26;CustomIPTransport;vcldsnap;ACBr_PIXCD;bindcomp;ZPlain;ACBr_Serial;DBXInformixDriver;frce;ACBr_NFSeXDanfseRL;ACBr_BlocoX;dbxcds;ACBr_NFCeECFVirtual;adortl;ACBr_BoletoFR;ACBr_ANe;dsnapxml;dbrtl;IndyProtocols;inetdbxpress;ACBr_NF3eDANF3eESCPOS;ACBr_MTER;fmxase;$(DCC_UsePackage)</DCC_UsePackage>
@@ -83,6 +86,8 @@
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
@@ -124,6 +129,13 @@
                 <Source>
                     <Source Name="MainSource">C4DExceptionsDemo01.dpr</Source>
                 </Source>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\20.0\Bpl\HcConnection.bpl">HcComponentes - HcConnection</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclDataSnapNativeServer260.bpl">Embarcadero DBExpress DataSnap Native Server Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclbindcompfmx260.bpl">Embarcadero LiveBindings Components FireMonkey</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k260.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp260.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="3">
                 <DeployFile LocalName="Win32\Debug\C4DExceptionsDemo01.exe" Configuration="Debug" Class="ProjectOutput">
