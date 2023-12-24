@@ -10,9 +10,12 @@ uses
   C4D.Msg;
 
 type
-  ExceptionsMsg = class(EC4DExceptionsBase);
-  ExceptionsError = class(EC4DExceptionsBase);
-  ExceptionsObligatory = class(EC4DExceptionsBase);
+  ExceptionMsg = class(EC4DExceptionBase);
+  ExceptionError = class(EC4DExceptionBase);
+  ExceptionObligatory = class(EC4DExceptionBase);
+  ExceptionWarning = class(EC4DExceptionBase);
+  ExceptionPermission = class(EC4DExceptionBase);
+  ExceptionEmpty = class(EC4DExceptionBase);
 
   TC4DExceptions = class
   private
@@ -28,20 +31,26 @@ var
 begin
   LMsg := E.Message;
   LDetails := '';
-  if(E is EC4DExceptionsBase)then
-    LDetails := EC4DExceptionsBase(E).Details;
+  if(E is EC4DExceptionBase)then
+    LDetails := EC4DExceptionBase(E).Details;
 
-  if(E is ExceptionsMsg)then
+  if(E is ExceptionMsg)then
     ShowMsg(LMsg, LDetails)
-  else if(E is ExceptionsError)then
+  else if(E is ExceptionWarning)then
+    ShowWarning(LMsg, LDetails)
+  else if(E is ExceptionError)then
     ShowError(LMsg, LDetails)
-  else if(E is ExceptionsObligatory)then
+  else if(E is ExceptionPermission)then
+    ShowPermission(LMsg, LDetails)
+  else if(E is ExceptionObligatory)then
     ShowObligatory(LMsg, LDetails)
+  else if(E is ExceptionEmpty)then
+    ShowEmpty(LMsg, LDetails)
   else
-    ShowError(LMsg);
+    ShowError(E.Message);
 
-  if(E is EC4DExceptionsBase)then
-    EC4DExceptionsBase(E).DoSetFocus;
+  if(E is EC4DExceptionBase)then
+    EC4DExceptionBase(E).DoSetFocus;
 end;
 
 initialization

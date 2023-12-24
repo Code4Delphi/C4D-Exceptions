@@ -4,8 +4,8 @@
 	"installedModules": {
 		"github.com/code4delphi/c4d-msg": {
 			"name": "c4d-msg",
-			"version": "v1.0.0",
-			"hash": "9f1b05529a865659e3b539dd6ca5747a",
+			"version": "v1.1.0",
+			"hash": "444f2b960d4d4f9dd1dbc949dedd6d21",
 			"artifacts": {},
 			"failed": false,
 			"changed": false

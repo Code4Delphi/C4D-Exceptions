@@ -5,6 +5,7 @@ interface
 uses
   Winapi.Windows,
   Winapi.Messages,
+  Winapi.ShellAPI,
   System.SysUtils,
   System.Variants,
   System.Classes,
@@ -17,6 +18,7 @@ uses
   Vcl.Mask,
   Vcl.DBCtrls,
   Vcl.ComCtrls,
+  Vcl.Imaging.pngimage,
   C4D.Exceptions;
 
 type
@@ -44,12 +46,24 @@ type
     btnExceptionDefault: TButton;
     Button2: TButton;
     Button3: TButton;
+    Panel1: TPanel;
+    pnBackLogoELinks: TPanel;
+    pnBackLogo: TPanel;
+    Image1: TImage;
+    pnBackLinks: TPanel;
+    lbYoutube: TLabel;
+    lbGitHub: TLabel;
+    lbTelegram: TLabel;
     procedure btnExceptionDefaultClick(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure btnMsgClick(Sender: TObject);
     procedure btnErrorClick(Sender: TObject);
     procedure btnObligatoryClick(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure btnWarningClick(Sender: TObject);
+    procedure btnPermissionClick(Sender: TObject);
+    procedure btnEmptyClick(Sender: TObject);
+    procedure lbYoutubeClick(Sender: TObject);
   private
 
   public
@@ -66,27 +80,45 @@ implementation
 const
   MSG_PADRAO = 'Esta mensagem não sera exibida';
 
-procedure TC4DExceptionsDemo01ViewMain.btnErrorClick(Sender: TObject);
-begin
-  raise ExceptionsError.Create('Mesagem de Erro', 'Detalhes');
-  ShowMessage(MSG_PADRAO);
-end;
-
 procedure TC4DExceptionsDemo01ViewMain.btnExceptionDefaultClick(Sender: TObject);
 begin
-  raise Exception.Create('Error Message');
+  raise Exception.Create('Error Message Exception Default');
   ShowMessage(MSG_PADRAO);
 end;
 
 procedure TC4DExceptionsDemo01ViewMain.btnMsgClick(Sender: TObject);
 begin
-  raise ExceptionsMsg.Create('Mesagem de informação', 'Detalhes');
+  raise ExceptionMsg.Create('Mesagem de informação', 'Detalhes opicionais');
+  ShowMessage(MSG_PADRAO);
+end;
+
+procedure TC4DExceptionsDemo01ViewMain.btnWarningClick(Sender: TObject);
+begin
+  raise ExceptionWarning.Create('Mesagem Warning');
+  ShowMessage(MSG_PADRAO);
+end;
+
+procedure TC4DExceptionsDemo01ViewMain.btnErrorClick(Sender: TObject);
+begin
+  raise ExceptionError.Create('Mesagem de Erro', 'Detalhes opicionais');
+  ShowMessage(MSG_PADRAO);
+end;
+
+procedure TC4DExceptionsDemo01ViewMain.btnPermissionClick(Sender: TObject);
+begin
+  raise ExceptionPermission.Create('Mesagem de Permission');
   ShowMessage(MSG_PADRAO);
 end;
 
 procedure TC4DExceptionsDemo01ViewMain.btnObligatoryClick(Sender: TObject);
 begin
-  raise ExceptionsObligatory.Create('Mesagem de obrigatório', 'Detalhes', Edit1);
+  raise ExceptionObligatory.Create('Mesagem de obrigatório', 'Detalhes', Edit1);
+  ShowMessage(MSG_PADRAO);
+end;
+
+procedure TC4DExceptionsDemo01ViewMain.btnEmptyClick(Sender: TObject);
+begin
+  raise ExceptionEmpty.Create('Mensagem Empty, dados não encontrados');
   ShowMessage(MSG_PADRAO);
 end;
 
@@ -100,7 +132,7 @@ end;
 procedure TC4DExceptionsDemo01ViewMain.Button3Click(Sender: TObject);
 begin
   if(Edit1.Text = '')then
-    raise ExceptionsObligatory.Create('Campo obrigatório sem preenchimento', 'Detalhes', ComboBox1);
+    raise ExceptionObligatory.Create('Campo obrigatório sem preenchimento', Edit1);
 
   if(Edit1.Text = '')then
   begin
@@ -111,6 +143,11 @@ begin
   end;
 
   //CONTINUACAO DO CODIGO
+end;
+
+procedure TC4DExceptionsDemo01ViewMain.lbYoutubeClick(Sender: TObject);
+begin
+  ShellExecute(0, nil, PChar(TLabel(Sender).Caption), '', '', SW_ShowNormal);
 end;
 
 end.
