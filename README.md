@@ -34,7 +34,7 @@ With C4D-Exceptions you can control exceptions in your systems quickly, easily a
 boss install github.com/Code4Delphi/C4D-Exceptions
 ```
 
-* **Manual installation**: Open your Delphi and add the following folder to your project, under *Project > Options > Resource Compiler > Directories and Conditionals > Include file search path*
+* **Manual installation**: Open your Delphi and add the following folder to your project, under *Project > Options > Building > Delphi Compiler > Search path*
 
 ```
 C4D-Exceptions\Src
