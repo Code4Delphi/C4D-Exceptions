@@ -36,7 +36,7 @@ boss install github.com/Code4Delphi/C4D-Exceptions
 
 * **Manual installation**: Open your Delphi and add the following folder to your project, under *Project > Options > Building > Delphi Compiler > Search path*
 
-```
+```delphi
 C4D-Exceptions\Src
 ```
 
@@ -44,7 +44,7 @@ C4D-Exceptions\Src
 
 ## 🚀 Quickstart
 * Add uses to your system:
-```
+```delphi
 uses
   C4D.Exceptions;
 ```
@@ -52,32 +52,32 @@ uses
 #### When generating exceptions, enter one of the following options::
 
 * Information exception:  
-```
+```delphi
  raise ExceptionMsg.Create('My message', 'More details (optional)');
 ```
 
 * Warning exception:
-```
+```delphi
 raise ExceptionWarning.Create('My message', 'More details (optional)');
 ```
 
 * Error exception:
-```
+```delphi
 raise ExceptionError.Create('My message', 'More details (optional)');
 ```
 
 * Permission exception:
-```
+```delphi
 raise ExceptionPermission.Create('My message', 'More details (optional)');
 ```
 
 * Obligatory exception:
-```
+```delphi
 raise ExceptionObligatory.Create('My message (optional)', 'More details (optional)');
 ```
 
 * Empty exception:
-```
+```delphi
 raise ExceptionEmpty.Create('My message', 'More details (optional)');
 ```
 
