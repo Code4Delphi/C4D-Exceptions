@@ -5,7 +5,7 @@ With C4D-Exceptions you can control exceptions in your systems quickly, easily a
 
 ## ⚙️ Installation
 
-* Installation using the [**TMS Smart Setup**](https://doc.tmssoftware.com/smartsetup/):
+* Installation using the [**TMS Smart Setup**](https://doc.tmssoftware.com/smartsetup/download/index.html):
 
 ```
 tms install c4d.exceptions
