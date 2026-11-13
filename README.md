@@ -56,7 +56,7 @@ raise ExceptionPermission.Create('My message', 'More details (optional)');
 
 * Obligatory exception:
 ```delphi
-raise ExceptionObligatory.Create('My message (optional)', 'More details (optional)');
+raise ExceptionObligatory.Create('My message (optional)', Edit1);
 ```
 
 * Empty exception:
@@ -67,6 +67,40 @@ raise ExceptionEmpty.Create('My message', 'More details (optional)');
 ### Exception default
 * If the standard exception is reported (raise Exception.Create('Error Message');) the exception that will be displayed will be the Error exception (ExceptionError)
 
+<br>
+
+## 🗑️ Uninstallation
+
+`c4d.exceptions` depends on [`c4d.msg`](https://github.com/Code4Delphi/C4D-Msg), which is installed automatically together with it.
+
+* Uninstall both, listing them explicitly:
+
+```
+tms uninstall c4d.exceptions c4d.msg
+```
+
+* Uninstall `c4d.exceptions` and take its dependencies (`c4d.msg`) along:
+
+```
+tms uninstall c4d.exceptions -cascade
+```
+
+* Uninstall only `c4d.exceptions` and keep `c4d.msg` installed:
+
+```
+tms uninstall c4d.exceptions
+```
+
+* Uninstall only `c4d.msg` and keep `c4d.exceptions` installed, using `-force`:
+
+```
+tms uninstall c4d.msg -force
+```
+
+> [!WARNING]
+> Without `-force`, Smart Setup refuses to remove `c4d.msg` while `c4d.exceptions` is installed. With `-force`, `c4d.exceptions` is left without its dependency and will not build until `c4d.msg` is installed again.
+
+<br>
 
 ## ⌨️ Demo
 * Next to the project sources, you will find a test project, in the folder:
