@@ -12,6 +12,9 @@ application:
   name: C4D Exceptions
   description: With C4D-Exceptions you can control exceptions in your systems quickly, easily and centrally.
   company name: Code4Delphi
+  copyright: Code4Delphi
+  license: MIT
+  license url: https://github.com/Code4Delphi/C4D-Exceptions/blob/master/LICENSE
   url: https://github.com/Code4Delphi/C4D-Exceptions
   vcs protocol: git
 
